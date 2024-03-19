@@ -1,0 +1,747 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  height: 5000px;
+  color: white;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+/* component */
+.the-header h2 {
+  color: #8e7754;
+  font-size: 45px;
+}
+.the-header .hr {
+  height: 4px;
+  width: 90px;
+  background-color: #8e7754;
+  margin: 12px auto 80px;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 100px 0;
+}
+.content {
+  overflow: auto;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.hero-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* any::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+} */
+
+/* header */
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  padding: 8px 0;
+  background-color: black;
+  transition: 0.6s;
+  scroll-behavior: smooth;
+}
+.header-container {
+  padding: 0;
+}
+.header-logo {
+  float: left;
+  width: 15%;
+}
+.header-logo img {
+  width: 100%;
+}
+.header-links {
+  float: right;
+}
+.header-links li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.header-links a {
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+
+.header-active,
+.header-links a:hover {
+  border-bottom: 2px solid #8e7754;
+  transition: 0.3s;
+  color: #8e7754;
+}
+/* home */
+.home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(../Images/drew-coffman-1872.jpg);
+}
+.home-info {
+  width: 100%;
+}
+.home-title {
+  font-size: 55px;
+  text-transform: uppercase;
+}
+.home-p {
+  margin: 30px 0 40px;
+  letter-spacing: 1.5px;
+  line-height: 1.6px;
+  color: white;
+}
+.home-btn .btn {
+  padding: 15px 0;
+  min-width: 150px;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+.home-btn .btn2 {
+  margin-left: 15px;
+  background-color: #8e7754;
+  color: white;
+  border: 0;
+}
+.home-btn .btn:hover {
+  background-color: white;
+  color: black;
+}
+/* section1 */
+.section1 {
+  height: 100vh;
+}
+
+.section1-box {
+  position: relative;
+  float: left;
+  color: black;
+  border: 1px solid #888;
+  width: 30%;
+  padding: 30px 15px;
+  transition: 0.5s;
+}
+
+.section1-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  transition: 0.5s;
+}
+.section1-box:hover::after {
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  z-index: -1;
+}
+.section1-box i {
+  font-size: 30px;
+  color: #8e7754;
+}
+.section1-box h3 {
+  font-size: 30px;
+  margin: 15px 0;
+  transition: 1s;
+}
+.section1-box:hover h3 {
+  color: white;
+}
+.section1-box p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  line-height: 22px;
+}
+.section1-box a {
+  font-size: 25px;
+  color: #8e7754;
+}
+.section1-box2 {
+  margin: 0 5%;
+}
+
+/* featured */
+.featured {
+  background-color: #f8f8f8;
+}
+
+.featured-content {
+  margin: 50px 0;
+  overflow: auto;
+}
+.featured-box {
+  position: relative;
+  float: left;
+  width: 30%;
+  padding: 20px;
+}
+.featured-box2 {
+  margin: 0 5%;
+}
+
+.featured-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.featured-box:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.featured-box img {
+  position: relative;
+  width: 100%;
+}
+
+.featured-info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  visibility: hidden;
+  width: 80%;
+}
+
+.featured-box:hover .featured-info {
+  visibility: visible;
+}
+.featured-info p {
+  color: #8e7754;
+  font-weight: bold;
+}
+.featured-info h3 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+.featured-info i {
+  padding: 10px;
+  background-color: #8e7754;
+  color: #333;
+  font-size: 25px;
+}
+i.featured-i2 {
+  margin: 0 0 0 10px;
+}
+/* offer */
+
+.offer-content {
+  overflow: auto;
+  margin: 80px 0;
+}
+.offer-box {
+  float: left;
+  width: 30%;
+  border: #a8a8a8 solid 1px;
+  padding: 30px 15px 30px 70px;
+  position: relative;
+  text-align: start;
+}
+.offer-box2 {
+  margin: 0 5%;
+}
+.offer-box::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: -1;
+}
+.offer-box:hover::after {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+.offer-box i {
+  color: #8e7754;
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  font-size: 30px;
+}
+.offer-box h2 {
+  color: black;
+  font-weight: bold;
+}
+.offer-box:hover h2 {
+  color: #8e7754;
+}
+
+.offer-box p {
+  margin: 15px 0;
+  color: #999;
+  line-height: 1.6;
+}
+.offer-box:hover p {
+  color: white;
+}
+
+/* service */
+.service {
+  background-color: #f8f8f8;
+}
+
+.service-left {
+  float: left;
+  width: 50%;
+  color: black;
+  text-align: start;
+  position: relative;
+}
+.service-left h2 {
+  font-size: 45px;
+  color: #8e7754;
+}
+.service-left .hr {
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #8e7754;
+  margin-top: 10px;
+}
+.service-left p {
+  color: black;
+  margin: 50px 0 20px;
+}
+
+.service-info i {
+  font-size: 20px;
+  color: #8e7754;
+  padding: 9px;
+  background-color: white;
+  border-radius: 50%;
+}
+.service-info li {
+  margin-bottom: 18px;
+}
+.service-right {
+  float: left;
+  width: 50%;
+}
+.service-right img {
+  width: 80%;
+  margin-bottom: 15px;
+}
+.service-bullets li {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #888;
+}
+.service-bullets .bullets-active {
+  background-color: #8e7754;
+}
+.service-bullets .bullets2 {
+  margin: 0 10px;
+}
+.service-bullets li:hover {
+  background-color: #8e7754;
+}
+/* numbers */
+.numbers {
+  padding: 100px 0;
+  background-image: url(../Images/ben-garratt.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.numbers::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.numbers-box {
+  width: 25%;
+  float: left;
+  position: relative;
+}
+.numbers-box i {
+  color: #8e7754;
+  font-size: 25px;
+}
+.numbers-box p {
+  margin: 14px 0 8px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.numbers-box span {
+  font-size: 22px;
+}
+/* pricing */
+.pricing-content {
+  overflow: auto;
+  margin: 70px 0;
+}
+
+.box2 {
+  margin: 0 5%;
+}
+.pricing-box {
+  float: left;
+  width: 30%;
+  border: 1px solid rgb(145, 142, 142);
+  border-radius: 10px;
+  color: #9e9e9e;
+  position: relative;
+}
+.pricing-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: -1;
+}
+.pricing-box:hover::after {
+  height: 100%;
+  visibility: visible;
+  opacity: 0.5;
+}
+.pricing-box:hover .paragraph {
+  color: white;
+}
+
+.pricing-box .header-p {
+  margin: 25px 0 15px;
+}
+.pricing-box .circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #8e7754;
+  margin: auto;
+}
+.circle:hover {
+  background-color: #8e7754;
+}
+.circle:hover span {
+  color: #e8e8e8;
+}
+
+.pricing-box .price {
+  font-size: 50px;
+  font-weight: bold;
+  display: block;
+  margin-top: 13px;
+  color: black;
+}
+.pricing-box .month {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+.pricing-box .paragraph {
+  margin: 10px 0;
+}
+
+.pricing-box .btn {
+  font-size: 18px;
+  margin: 10px 0 30px;
+  color: #8e7754;
+  border: 2px solid #8e7754;
+  padding: 12px 22px;
+  border-radius: 50px;
+  background-color: transparent;
+}
+.pricing-box .btn:hover {
+  background-color: #8e7754;
+  color: #e8e8e8;
+}
+.paragraph:hover,
+p:hover {
+  color: #8e7754;
+}
+.pricing-box:hover .header-p,
+.pricing-box:hover .span {
+  color: #8e7754;
+}
+
+/* blog */
+.blog {
+  background-image: url(../Images/ben-garratt.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 100px 0 60px;
+  position: relative;
+}
+.blog-container {
+  width: 60%;
+  margin: auto;
+}
+.blog-box {
+  float: left;
+  width: 45%;
+  text-align: start;
+  position: relative;
+}
+.blog-box2 {
+  margin-left: 10%;
+}
+.blog-top {
+  margin: 0 0 20px;
+}
+.blog-img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.blog-img img {
+  border-radius: 50%;
+  width: 100%;
+}
+.blog-info {
+  display: inline-block;
+}
+.blog-info h3 {
+  font-size: 25px;
+}
+.blog-info p {
+  margin-top: 5px;
+  color: #ffc265;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* team */
+
+.team-content {
+  overflow: auto;
+  margin-top: 50px;
+}
+.team-box {
+  width: 30%;
+  float: left;
+  padding: 15px 25px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+.team-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: 0.5s;
+}
+.team-box:hover::after {
+  height: 100%;
+  opacity: 0.4;
+}
+.team-box:hover .team-img-top::after {
+  opacity: 1;
+}
+.team-box:hover .team-icon {
+  visibility: visible;
+}
+.team-img-top {
+  position: relative;
+}
+.team-img-top::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.team-img-top img {
+  width: 100%;
+  height: 250px;
+}
+
+.team-icon {
+  background-color: #8e7754;
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  z-index: 6;
+}
+.team-icon i {
+  color: white;
+  display: block;
+  padding: 15px;
+}
+.team-info {
+  margin: 15px 0 0;
+}
+.team-info h3 {
+  color: black;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.team-info p {
+  color: #8e7754;
+  font-size: 20px;
+}
+/* news */
+.news-content {
+  overflow: auto;
+  margin-top: 20px;
+  background-color: #ccc;
+}
+.news-box {
+  width: 30%;
+  float: left;
+  text-align: left;
+  background-color: #fff;
+  color: black;
+  padding: 10px;
+  position: relative;
+}
+.news-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  transition: 0.5s;
+}
+.news-box:hover::before {
+  height: 100%;
+  visibility: visible;
+}
+.news-img {
+  width: 80%;
+}
+.news-img img {
+  width: 100%;
+}
+.news-icon {
+  margin: 15px 0;
+}
+.news-icon i {
+  color: #8e7754;
+  margin-right: 8px;
+}
+.news-icon span {
+  padding-right: 10px;
+}
+
+.news-box h3 {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+.news-box:hover h3 {
+  color: #8e7754;
+}
+.news-box p {
+  margin: 20px 0;
+}
+.news-box a {
+  color: #8e7754;
+  font-size: 20px;
+}
+/* footer */
+.footer {
+  background-color: #353330;
+  padding: 50px 0;
+}
+
+.footer-img {
+  width: 25%;
+  margin: auto;
+}
+.footer-img img {
+  width: 100%;
+}
+.footer-icon {
+  margin: 30px 0;
+}
+.footer-icon-i {
+  display: inline-block;
+  color: #8c8a86;
+  background-color: #484540;
+  border-radius: 50%;
+  margin-right: 5px;
+  padding: 15px;
+}
+.footer-icon-i:hover {
+  background-color: #8e7754;
+}
+.footer-icon-i:hover a i {
+  color: white;
+}
+.footer-icon-i a i {
+  font-size: 20px;
+  color: #777;
+}
+
+.copyright {
+  margin: 20px 0;
+  color: #777;
+}
