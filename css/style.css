@@ -12,6 +12,9 @@ body {
   text-align: center;
   scroll-behavior: smooth;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* component */
 .the-header h2 {
   color: #8e7754;
